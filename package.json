@@ -14,7 +14,9 @@
   "main": "Libraries/react-native-windows/react-native-windows.js",
   "scripts": {
     "test": "jasmine",
-    "flow-check": "flow check"
+    "flow-check": "flow check",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "Libraries",
@@ -47,9 +49,11 @@
     "uuid": "^2.0.1",
     "xml-parser": "^1.2.1",
     "yeoman-environment": "^1.5.3",
-    "yeoman-generator": "^0.21.2"
+    "yeoman-generator": "^0.21.2",
+    "snyk": "^1.189.0"
   },
   "rnpm": {
     "plugin": "./local-cli/index.js"
-  }
+  },
+  "snyk": true
 }
